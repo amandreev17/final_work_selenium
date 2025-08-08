@@ -18,6 +18,12 @@ class ProductPageLocators:
     ADDED_PRICE_PRODUCT = (By.CSS_SELECTOR, ".alertinner p strong")
 
 
-class BasePageLocators():
+class BasePageLocators:
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
+    BASKET_LINK = (By.CSS_SELECTOR, "[class='btn-group'] a")
+
+
+class BasketPageLocators:
+    BASKET_TOTALS = (By.CSS_SELECTOR, "#basket_totals")
+
