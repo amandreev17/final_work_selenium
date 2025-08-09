@@ -11,7 +11,7 @@ class ProductPage(BasePage):
     def add_to_basket(self):
         button_add = self.browser.find_element(*ProductPageLocators.LINK_ADD)
         button_add.click()
-        self.solve_quiz_and_get_code()
+        # self.solve_quiz_and_get_code()
         # time.sleep(90)
 
     def should_be_add_to_basket(self):
