@@ -21,3 +21,9 @@ class BasketPage(BasePage):
             return True
 
         return False
+
+    def should_be_basket_is_empty(self):
+        assert self.basket_is_empty(), "Basket is not empty"
+
+
+

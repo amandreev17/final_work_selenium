@@ -11,8 +11,6 @@ class ProductPage(BasePage):
     def add_to_basket(self):
         button_add = self.browser.find_element(*ProductPageLocators.LINK_ADD)
         button_add.click()
-        # self.solve_quiz_and_get_code()
-        # time.sleep(90)
 
     def should_be_add_to_basket(self):
         name_product = self.browser.find_element(*ProductPageLocators.NAME_PRODUCT).text
@@ -22,3 +20,7 @@ class ProductPage(BasePage):
         price_product = self.browser.find_element(*ProductPageLocators.PRICE_PRODUCT).text
         assert self.browser.find_element(
             *ProductPageLocators.ADDED_PRICE_PRODUCT).text in price_product, "Other price"
+
+    def should_be_is_not_element_present(self):
+        assert self.is_not_element_present(*ProductPageLocators.ADDED_PRODUCT), "Found"
+
